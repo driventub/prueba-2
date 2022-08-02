@@ -69,7 +69,11 @@ public class Prueba2PaApplication implements CommandLineRunner {
 
 		// // 5.
 		
-		this.gestorService.generarReporteCita(LocalDateTime.of(2022, 7, 01, 07, 01), new BigDecimal("20.00"));
+		// this.gestorService.generarReporteCita(LocalDateTime.of(2022, 7, 01, 07, 01), new BigDecimal("20.00"));
+
+		// Tarea
+		
+		this.gestorService.generarPacienteSencillo(LocalDateTime.of(1970, 10, 05, 01, 01), "Masculino");
 
 	}
 

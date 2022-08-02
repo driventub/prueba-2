@@ -13,6 +13,7 @@ import uce.edu.prueba2_pa.repository.ICitaMedicaRepo;
 import uce.edu.prueba2_pa.repository.modelo.CitaMedica;
 import uce.edu.prueba2_pa.repository.modelo.Doctor;
 import uce.edu.prueba2_pa.repository.modelo.Paciente;
+import uce.edu.prueba2_pa.repository.modelo.PacienteSencillo;
 import uce.edu.prueba2_pa.repository.modelo.ReporteCita;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -70,6 +71,16 @@ public class GestorServiceImpl implements IGestorService{
         for (ReporteCita reporteCita : lista) {
             LOG.info(reporteCita.toString());
         }
+        
+    }
+
+    @Override
+    public void generarPacienteSencillo(LocalDateTime fechaNacimiento, String genero) {
+        List<PacienteSencillo> lista = this.pacienteService.buscar(fechaNacimiento, genero);
+        for (PacienteSencillo pacienteSencillo : lista) {
+            LOG.info(pacienteSencillo.toString());
+        }
+        
         
     }
     

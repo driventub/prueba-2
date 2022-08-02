@@ -1,5 +1,8 @@
 package uce.edu.prueba2_pa.repository;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -10,6 +13,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import uce.edu.prueba2_pa.repository.modelo.Paciente;
+import uce.edu.prueba2_pa.repository.modelo.PacienteSencillo;
 
 @Repository
 @Transactional
@@ -50,6 +54,16 @@ public class PacienteRepoImpl implements IPacienteRepo {
 				.createQuery("SELECT p FROM Paciente p WHERE p.cedula = :datoCedula   ", Paciente.class)
 				.setParameter("datoCedula", cedula);
 		return myTypedQuery.getSingleResult();
+	}
+
+	
+	@Override
+	public List<PacienteSencillo> buscar(LocalDateTime fechaNacicimiento, String genero) {
+		TypedQuery<PacienteSencillo> myTypedQuery = (TypedQuery<PacienteSencillo>) this.e
+				.createQuery("SELECT NEW uce.edu.prueba2_pa.repository.modelo.PacienteSencillo(p.cedula, p.nombre,p.fechaNacimiento , p.genero) FROM Paciente p WHERE p.fechaNacimiento >= :fecha AND p.genero = :genero", PacienteSencillo.class)
+				.setParameter("fecha", fechaNacicimiento)
+				.setParameter("genero",genero);
+		return myTypedQuery.getResultList();
 	}
 
 }

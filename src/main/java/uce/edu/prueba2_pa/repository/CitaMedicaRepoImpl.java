@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
 import uce.edu.prueba2_pa.repository.modelo.CitaMedica;
+import uce.edu.prueba2_pa.repository.modelo.PacienteSencillo;
 import uce.edu.prueba2_pa.repository.modelo.ReporteCita;
 
 @Repository
@@ -67,5 +68,7 @@ public class CitaMedicaRepoImpl implements ICitaMedicaRepo {
 				.setParameter("datoCosto",costo);
 		return myTypedQuery.getResultList();
 	}
+
+
 
 }

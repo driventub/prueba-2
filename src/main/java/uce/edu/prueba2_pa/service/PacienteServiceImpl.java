@@ -1,5 +1,8 @@
 package uce.edu.prueba2_pa.service;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import uce.edu.prueba2_pa.repository.IPacienteRepo;
 import uce.edu.prueba2_pa.repository.modelo.Paciente;
+import uce.edu.prueba2_pa.repository.modelo.PacienteSencillo;
 
 @Service
 public class PacienteServiceImpl implements IPacienteService {
@@ -44,6 +48,12 @@ public class PacienteServiceImpl implements IPacienteService {
 	public Paciente buscarCedula(String cedula) {
 
 		return this.paciRepo.buscarCedula(cedula);
+	}
+
+	@Override
+	public List<PacienteSencillo> buscar(LocalDateTime fechaNacicimiento, String genero) {
+		// TODO Auto-generated method stub
+		return this.paciRepo.buscar(fechaNacicimiento, genero);
 	}
 
 }
