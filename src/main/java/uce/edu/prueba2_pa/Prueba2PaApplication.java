@@ -36,38 +36,38 @@ public class Prueba2PaApplication implements CommandLineRunner {
 		Paciente paciente = new Paciente();
 
 		// 1.
-		doctor.setApellido("Monterrey");
-		doctor.setCedula("173782994-3");
-		doctor.setFechaNacimiento(LocalDateTime.of(1980, 12, 03, 01, 01));
-		doctor.setNombre("Belen");
-		doctor.setNumeroConsultorio("11A");
-		doctor.setSalario(new BigDecimal("7000.00"));
-		doctor.setTitulo("Licenciada");
+		// doctor.setApellido("Monterrey");
+		// doctor.setCedula("173782994-3");
+		// doctor.setFechaNacimiento(LocalDateTime.of(1980, 12, 03, 01, 01));
+		// doctor.setNombre("Belen");
+		// doctor.setNumeroConsultorio("11A");
+		// doctor.setSalario(new BigDecimal("7000.00"));
+		// doctor.setTitulo("Licenciada");
 
-		this.doctorService.insertar(doctor);
+		// this.doctorService.insertar(doctor);
 		// 2.
 
-		paciente.setApellido("Gomez");
-		paciente.setCedula("173732954-0");
-		paciente.setCodigoIESS("37372");
-		paciente.setEstatura(new BigDecimal("166.3"));
-		paciente.setFechaNacimiento(LocalDateTime.of(1970, 11, 05, 01, 01));
-		paciente.setGenero("Masculino");
-		paciente.setNombre("Andres");
-		paciente.setPeso(new BigDecimal("68.7"));
+		// paciente.setApellido("Gomez");
+		// paciente.setCedula("173732954-0");
+		// paciente.setCodigoIESS("37372");
+		// paciente.setEstatura(new BigDecimal("166.3"));
+		// paciente.setFechaNacimiento(LocalDateTime.of(1970, 11, 05, 01, 01));
+		// paciente.setGenero("Masculino");
+		// paciente.setNombre("Andres");
+		// paciente.setPeso(new BigDecimal("68.7"));
 
-		this.pacienteService.insertar(paciente);
+		// this.pacienteService.insertar(paciente);
 
-		// 3.
+		// // 3.
 
-		this.gestorService.agendarCita("1Q", LocalDateTime.of(2022, 7, 31, 7, 01), new BigDecimal("25.00"), "Quito",
-				"173782994-3", "173732954-0");
+		// this.gestorService.agendarCita("1Q", LocalDateTime.of(2022, 7, 31, 7, 01), new BigDecimal("25.00"), "Quito",
+		// 		"173782994-3", "173732954-0");
 
-		// 4.
+		// // 4.
 
-		this.gestorService.actualizarCita("1Q", "Urea Alta", "Paracetamol", LocalDateTime.of(2022, 8, 31, 07, 01 ));
+		// this.gestorService.actualizarCita("1Q", "Urea Alta", "Paracetamol", LocalDateTime.of(2022, 8, 31, 07, 01 ));
 
-		// 5.
+		// // 5.
 		
 		this.gestorService.generarReporteCita(LocalDateTime.of(2022, 7, 01, 07, 01), new BigDecimal("20.00"));
 

@@ -1,7 +1,5 @@
 package uce.edu.prueba2_pa.repository;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -27,13 +25,6 @@ public class DoctorRepoImpl implements IDoctorRepo {
 		return this.e.find(Doctor.class, id);
 	}
 
-	@Override
-	public List<Doctor> buscarTodos() {
-		TypedQuery<Doctor> myTypedQuery = (TypedQuery<Doctor>) this.e
-				.createQuery("SELECT d FROM Doctor d    ", Doctor.class);
-		return myTypedQuery.getResultList();
-
-	}
 
 	@Override
 	public void actualizar(Doctor doct) {

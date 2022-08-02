@@ -626,3 +626,17 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Invalid path: 'p
 19:46:58.851 [restartedMain] INFO  uce.edu.prueba2_pa.Prueba2PaApplication - Started Prueba2PaApplication in 6.898 seconds (JVM running for 8.986)
 19:46:59.555 [restartedMain] INFO  uce.edu.prueba2_pa.service.GestorServiceImpl - ReporteCita [costoCita=25.00, fechaCita=2022-07-31T07:01, fechaControl=2022-08-31T07:01, numeroCita=1Q]
 19:46:59.571 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:53:34.345 [restartedMain] INFO  uce.edu.prueba2_pa.Prueba2PaApplication - Starting Prueba2PaApplication using Java 17.0.3 on DESKTOP-E9HB7V2 with PID 9960 (C:\Users\aldaz\Documents\paulo\Sexto_Septimo\PII\workspace\unidad_2\prueba2_pa\target\classes started by aldaz in C:\Users\aldaz\Documents\paulo\Sexto_Septimo\PII\workspace\unidad_2\prueba2_pa)
+19:53:34.353 [restartedMain] INFO  uce.edu.prueba2_pa.Prueba2PaApplication - No active profile set, falling back to 1 default profile: "default"
+19:53:34.456 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:53:35.584 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:53:35.634 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
+19:53:36.871 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:53:37.068 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.10.Final
+19:53:37.586 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19:53:38.464 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:53:40.354 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:53:40.374 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:53:40.746 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19:53:40.792 [restartedMain] INFO  uce.edu.prueba2_pa.Prueba2PaApplication - Started Prueba2PaApplication in 7.377 seconds (JVM running for 9.347)
+19:53:41.124 [SpringApplicationShutdownHook] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
